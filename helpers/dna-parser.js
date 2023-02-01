@@ -27,6 +27,7 @@ class NFT {
         dna = await contractHandler.getDNA(id);
       }
 
+      console.log('dna', dna);
       let parser;
       if (type === 'avatar') {
         parser = new DNAParser(totemCommonFiles.anvilandTalesAvatarFilterJson, dna);
