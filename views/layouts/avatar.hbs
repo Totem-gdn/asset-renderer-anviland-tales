@@ -8,9 +8,13 @@
 
 
 
-{{!-- transform="translate(450, 250)" --}}
+    {{#ifeq glow 'true'}}
+    	<g style="filter: drop-shadow(0px 0px 150px {{glow_color}});" transform="translate(150, 150)">
+    {{/ifeq}}
+    {{#ifeq glow 'false'}}
+    	<g transform="translate(150, 150)">
+    {{/ifeq}}
 
-    <g style="filter: drop-shadow(0px 0px 150px {{glow_color}});" transform="translate(150, 150)">
 
     {{!-- fat --}}
     
